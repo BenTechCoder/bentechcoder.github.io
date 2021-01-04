@@ -1,0 +1,296 @@
+@import url('https://fonts.googleapis.com/css2?family=Catamaran&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap');
+
+
+html {
+    box-sizing: border-box;
+   font-family: 'Courier New', Courier, monospace;
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+  }
+
+@media (max-width: 75em) {
+    html {
+      font-size: 60%;
+    }
+  }
+  
+ 
+  @media (max-width: 61.25em) {
+    html {
+      font-size: 58%;
+    }
+  }
+  
+
+  @media (max-width: 28.75em) {
+    html {
+      font-size: 55%;
+    }
+  }
+
+  .nav {
+    display: flex;
+    font-family: 'Syne Mono', 'catamaran';
+      font-size: x-large;
+    justify-content: flex-end;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background:	rgba(238, 232, 170, 0.63);
+    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
+    z-index: auto;
+  }
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+ }
+ 
+ li {
+    border-bottom: 1px solid rgb(82, 81, 81);
+    display: inline;
+ }
+
+
+ .navbar-info {
+  display: flex;
+  margin-right: 2rem;
+}
+
+@media (max-width: 28.75em) {
+  .nav {
+    justify-content: center;
+  }
+
+  .navbar-info {
+    margin: 12px;
+  }
+}
+
+.navbar-info a {
+  font-size: large;
+  padding: 10%;
+}
+
+.navbar-info a:hover {
+  background: rgb(163, 37, 37);
+}
+
+.welcome-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+  width: 100%;
+  height: 100vh;
+  background-color: #000;
+/*there will be an image placed here shortly just not for the fcc branch of the portfolio*/
+  background-image: url();
+ background-repeat: no-repeat;
+ background-position: left;
+  background-size: contain;
+}
+
+.welcome-section > p {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 200;
+  font-style: italic;
+  color: gold;
+}
+.welcome-section > h1 {
+  color: white;
+  font-size: 4em;
+}
+
+.projects-section {
+  text-align: center;
+  padding: 10rem 2rem;
+  background-image: url(https://opensource.com/sites/default/files/styles/image-full-size/public/lead-images/code_computer_development_programming.png?itok=4OM29-82);
+}
+
+.projects-section-header {
+  text-align: center;
+  font-size: x-large;
+  max-width: 640px;
+  border-bottom: 0.2rem solid rgb(3, 3, 3);
+}
+
+@media (max-width: 28.75em) {
+  .projects-section-header {
+    font-size: 4rem;
+  }
+}
+
+.projects-grid {
+  background-image: url(https://th.bing.com/th/id/OIP.wj7LGward2PASoptRLyzCgHaEL?w=276&h=180&c=7&o=5&dpr=2&pid=1.7);
+  background-repeat: repeat;
+  background-size: contain;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-gap: 4rem;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 30.625em) {
+  .projects-section {
+    padding: 6rem 1rem;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.project {
+  background-image: linear-gradient(to bottom right, rgba(92, 21, 21, 0.726), rgb(235, 235, 23));
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  border-radius: 2px;
+}
+
+.code {
+  color: rgb(0, 0, 0);
+  transition: color 0.3s ease-out;
+}
+
+.project:hover .code {
+  color: #ff7f50;
+}
+
+.project-image {
+  height: calc(100% - 6.8rem);
+  width: 100%;
+  object-fit: cover;
+}
+
+.project-title {
+  font-size: 2rem;
+  padding: 2rem 0.5rem;
+}
+
+.btn {
+  display: block;
+  text-align: center;
+  font-size: 200px;
+  padding: 1rem 2rem;
+  border-radius: 2px;
+}
+
+.btn-show-all {
+  text-align: center;
+  font-size: 4rem;
+  background: rgb(236, 236, 236);
+  transition: background 0.3s ease-out;
+}
+
+.btn-show-all:hover {
+  text-align: center;
+  background: rgba(126, 124, 124, 0.336);
+}
+
+.btn-show-all:hover > i {
+  transform: translateX(2px);
+}
+
+.btn-show-all > i {
+  margin-left: 10px;
+  transform: translateX(0);
+  transition: transform 0.3s ease-out;
+}
+
+.contact-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  height: 80vh;
+  padding: 0 2rem;
+  background: rgba(202, 190, 190, 0.61);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.contact-section-header > h2 {
+  color: rgb(0, 0, 0);
+  font-size: 6rem;
+}
+
+@media (max-width: 28.75em) {
+  .contact-section-header > h2 {
+    color: rgb(20, 20, 19);
+    font-size: 2rem;
+  }
+}
+
+.contact-section-header > p {
+  color: rgb(251, 255, 0);
+  font-style: italic;
+  font-size: 300%;
+}
+
+.contact-links {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  max-width: 980px;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+  flex-wrap: wrap;
+}
+
+.contact-details {
+  font-size: 2.4rem;
+  text-shadow: 2px 2px 1px #1f1f1f;
+  transition: transform 0.3s ease-out;
+}
+
+.contact-details:hover {
+  transform: translateY(8px);
+}
+
+/* Footer */
+
+footer {
+  font-weight: 300;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 3rem;
+  background: rgb(160, 144, 144);
+  border: 4px transparent gold;
+}
+
+footer > p {
+  font-size: x-large;
+  margin: 2rem;
+}
+
+footer i {
+  vertical-align: center;
+}
+
+@media (max-width: 28.75em) {
+  footer {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
